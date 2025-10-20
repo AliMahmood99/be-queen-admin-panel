@@ -277,6 +277,7 @@ const UsersManagement: React.FC = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-slate-700 w-16">#</th>
                     <th className="text-left py-4 px-6 text-sm font-semibold text-slate-700">User</th>
                     <th className="text-left py-4 px-6 text-sm font-semibold text-slate-700">Contact</th>
                     <th className="text-left py-4 px-6 text-sm font-semibold text-slate-700">Registration</th>
@@ -286,7 +287,7 @@ const UsersManagement: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {usersData.data.map((user) => {
+                  {usersData.data.map((user, index) => {
                     const isUpdating = updatingUserId === user.id;
                     return (
                       <tr
@@ -297,6 +298,11 @@ const UsersManagement: React.FC = () => {
                             : 'hover:bg-slate-50'
                         }`}
                       >
+                      <td className="py-4 px-6">
+                        <div className="text-sm font-medium text-slate-500">
+                          {(page - 1) * limit + index + 1}
+                        </div>
+                      </td>
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
                           <div className="h-10 w-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center">

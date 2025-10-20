@@ -264,6 +264,7 @@ const UserDetailsPage: React.FC = () => {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">
+                  <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700 w-16">#</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Service</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Provider</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Date</th>
@@ -273,8 +274,13 @@ const UserDetailsPage: React.FC = () => {
               </thead>
               <tbody>
                 {bookingHistory.length > 0 ? (
-                  bookingHistory.map((booking) => (
+                  bookingHistory.map((booking, index) => (
                     <tr key={booking.id} className="border-b border-slate-100 hover:bg-slate-50">
+                      <td className="py-3 px-6">
+                        <div className="text-sm font-medium text-slate-500">
+                          {(bookingPage - 1) * ITEMS_PER_PAGE + index + 1}
+                        </div>
+                      </td>
                       <td className="py-3 px-6 text-sm font-medium text-slate-900">{booking.service}</td>
                       <td className="py-3 px-6 text-sm text-slate-700">{booking.provider}</td>
                       <td className="py-3 px-6 text-sm text-slate-700">{booking.date}</td>
@@ -286,7 +292,7 @@ const UserDetailsPage: React.FC = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={5} className="py-8 text-center text-slate-500">
+                    <td colSpan={6} className="py-8 text-center text-slate-500">
                       No booking history available
                     </td>
                   </tr>
@@ -347,6 +353,7 @@ const UserDetailsPage: React.FC = () => {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">
+                  <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700 w-16">#</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Product</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Quantity</th>
                   <th className="text-left py-3 px-6 text-sm font-semibold text-slate-700">Date</th>
@@ -356,8 +363,13 @@ const UserDetailsPage: React.FC = () => {
               </thead>
               <tbody>
                 {orderHistory.length > 0 ? (
-                  orderHistory.map((order) => (
+                  orderHistory.map((order, index) => (
                     <tr key={order.id} className="border-b border-slate-100 hover:bg-slate-50">
+                      <td className="py-3 px-6">
+                        <div className="text-sm font-medium text-slate-500">
+                          {(orderPage - 1) * ITEMS_PER_PAGE + index + 1}
+                        </div>
+                      </td>
                       <td className="py-3 px-6 text-sm font-medium text-slate-900">{order.product}</td>
                       <td className="py-3 px-6 text-sm text-slate-700">{order.quantity}</td>
                       <td className="py-3 px-6 text-sm text-slate-700">{order.date}</td>
@@ -369,7 +381,7 @@ const UserDetailsPage: React.FC = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={5} className="py-8 text-center text-slate-500">
+                    <td colSpan={6} className="py-8 text-center text-slate-500">
                       No order history available
                     </td>
                   </tr>
