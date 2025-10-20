@@ -3,6 +3,7 @@ import { MainLayout } from './components/layout/MainLayout';
 import { Dashboard } from './pages/Dashboard';
 import UsersManagement from './pages/UsersManagement';
 import UserDetailsPage from './pages/UserDetailsPage';
+import DebugEnv from './pages/DebugEnv';
 
 // Placeholder components for routes (we'll create these later)
 
@@ -85,6 +86,7 @@ function App() {
         <Route path="advertisements" element={<Advertisements />} />
         <Route path="financial" element={<Financial />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="debug-env" element={<DebugEnv />} />
         {/* Redirect any unknown routes to dashboard */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
