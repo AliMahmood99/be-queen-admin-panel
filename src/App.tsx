@@ -1,14 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { MainLayout } from './components/layout/MainLayout';
 import { Dashboard } from './pages/Dashboard';
+import UsersManagement from './pages/UsersManagement';
+import UserDetailsPage from './pages/UserDetailsPage';
 
 // Placeholder components for routes (we'll create these later)
-const Users = () => (
-  <div className="text-center py-12">
-    <h2 className="text-2xl font-bold text-slate-900 mb-2">Users Management</h2>
-    <p className="text-slate-600">Coming soon...</p>
-  </div>
-);
 
 const Providers = () => (
   <div className="text-center py-12">
@@ -78,7 +74,8 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="users" element={<Users />} />
+        <Route path="users" element={<UsersManagement />} />
+        <Route path="users/:id" element={<UserDetailsPage />} />
         <Route path="providers" element={<Providers />} />
         <Route path="services" element={<Services />} />
         <Route path="products" element={<Products />} />

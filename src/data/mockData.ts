@@ -1,8 +1,6 @@
 import {
   User,
   Provider,
-  Service,
-  Product,
   Booking,
   Advertisement,
   DashboardStats,
