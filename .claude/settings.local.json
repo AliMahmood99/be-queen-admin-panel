@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /Users/alimahmood/Downloads/be-queen-admin-panel/src/**/*.{ts,tsx})",
+      "Bash(npm run build)",
+      "Bash(cat /Users/alimahmood/Downloads/be-queen-admin-panel/.env)",
+      "Bash(npm run dev)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
