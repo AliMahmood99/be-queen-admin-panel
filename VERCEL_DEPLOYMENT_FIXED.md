@@ -123,7 +123,7 @@ VITE_API_BASE_URL=https://api.bequeen.qa/api
 VITE_API_TIMEOUT=30000
 VITE_APP_NAME="BE QUEEN Admin Panel"
 VITE_APP_VERSION=1.0.0
-VITE_ENABLE_MOCK_DATA=false
+VITE_ENABLE_MOCK_DATA=true
 VITE_ENABLE_DEBUG=false
 ```
 
@@ -191,13 +191,13 @@ VITE_API_BASE_URL = https://api.bequeen.qa/api
 VITE_API_TIMEOUT = 30000
 VITE_APP_NAME = BE QUEEN Admin Panel
 VITE_APP_VERSION = 1.0.0
-VITE_ENABLE_MOCK_DATA = false
+VITE_ENABLE_MOCK_DATA = true
 VITE_ENABLE_DEBUG = false
 ```
 
 **Important Notes:**
 - All variables must start with `VITE_` (Vite requirement)
-- Set `VITE_ENABLE_MOCK_DATA=false` for production
+- Set `VITE_ENABLE_MOCK_DATA=true` for production
 - Replace API URL with actual production backend
 
 **4. Verify Deployment:**
@@ -285,7 +285,7 @@ https://admin.bequeen.qa
 ### Vercel Configuration:
 - [ ] Project imported to Vercel
 - [ ] Environment variables set
-- [ ] `VITE_ENABLE_MOCK_DATA=false` in production
+- [ ] `VITE_ENABLE_MOCK_DATA=true` in production
 - [ ] Production API URL configured
 - [ ] Build completes successfully
 
@@ -389,7 +389,7 @@ VITE_ENABLE_MOCK_DATA=true
 
 ### Production (Real API):
 ```bash
-VITE_ENABLE_MOCK_DATA=false
+VITE_ENABLE_MOCK_DATA=true
 ```
 - Uses real backend API
 - Requires `VITE_API_BASE_URL` to be set

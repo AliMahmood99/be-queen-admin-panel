@@ -44,7 +44,7 @@ VITE_APP_NAME=BE QUEEN Admin Panel
 VITE_APP_VERSION=1.0.0
 
 # Feature Flags
-VITE_ENABLE_MOCK_DATA=false
+VITE_ENABLE_MOCK_DATA=true
 VITE_ENABLE_DEBUG=false
 ```
 
@@ -374,14 +374,14 @@ VITE_ENABLE_DEBUG=true
 ### Production (Vercel Dashboard):
 ```bash
 VITE_API_BASE_URL=https://api.bequeen.qa/api
-VITE_ENABLE_MOCK_DATA=false
+VITE_ENABLE_MOCK_DATA=true
 VITE_ENABLE_DEBUG=false
 ```
 
 ### Staging (Optional):
 ```bash
 VITE_API_BASE_URL=https://staging-api.bequeen.qa/api
-VITE_ENABLE_MOCK_DATA=false
+VITE_ENABLE_MOCK_DATA=true
 VITE_ENABLE_DEBUG=true
 ```
 
